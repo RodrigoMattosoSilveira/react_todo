@@ -54,3 +54,7 @@ We use the `todo item component` to model `todo items` in our `todo list`. It ha
 - An element to remove the todo item; it will be also a div, now with “x” entity/icon; this div will have one onClick handler; as with all the previous data, and handler methods, this too will be passed thorough props.
 
 Import the `TodoItemInterface` interface from `interfaces.ts` and to use it to type props of this component. After this, type the onChange handler on input element with React.ChangeEvent<HTMLInputElement> because we are attaching onChange handler to input element.
+
+# Step 3 - Todo list component
+It takes handler methods for the `TodoItem`, and array of todo objects through props. The component itself contains one `div` wrapper element:
+- Inside this div will be a list, one ul element with a map() to iterate over the array of todo objects, and create one `li` element with one `TodoItem` component for each todo object, passing the individually `Todo` components to the `TodoItem` component, along with handler methods.

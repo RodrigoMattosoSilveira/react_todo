@@ -29,6 +29,9 @@ body {
   width: 100%;
 }
 
+.todo-header {
+    color: rgba(175, 47, 47, 0.15);
+}
 /* Todo list app styles  */
 .todo-list-app {
   padding-top: 32px;

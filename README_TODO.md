@@ -98,3 +98,5 @@ We use the `handleTodoBlur` method and add/remove CSS classes to provide a visua
 
 ## Returning all components
 Our todo list app is almost finished. Now, we now need to take all the components you’ve built so far, and imported in component, and return them. Make sure to provide all components with necessary props. After that, we can use the render() method and render the TodoListApp in the DOM.
+# styles
+Just add a little markup

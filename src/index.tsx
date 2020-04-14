@@ -72,6 +72,7 @@ const TodoListApp = () => {
 
   return (
     <div className="todo-list-app">
+      <h1 className="todo-header">todo</h1>
       <TodoForm
         todos={todos}
         handleTodoCreate={handleTodoCreate}

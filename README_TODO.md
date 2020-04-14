@@ -67,3 +67,34 @@ We use useState and useRef React hooks:
 The input element has two handler methods
 - onChange - Handles the event of navigating outside the `input` element; we want to preserve is value;
 - onKeyPress - Handles a `keypress` event, looking for the `enter` key so that we can create a new element;
+
+# Step 5 - Main (index) component
+We are almost done. There is just one component you need to build, the `TodoListApp` component; it implements methods for creating, updating, removing and completing our todos using `handleTodoCreate`, `handleTodoUpdate`, `handleTodoRemove` and `handleTodoComplete` methods respectively.
+
+We also use this component as our `todo store`, via the `useState` React hook. So, let’s build this component, step by step.
+
+## Imports
+First, as usually, we import the React dependencies, including the `render` method from `react-dom` so that we can render the `TodoListApp` component, our todo list app, in the DOM.
+
+WE also import `TodoForm` and `TodoList` components so you can later return, and render, them. When WE import these components WE also import the main external CSS stylesheet, so WE can later style our `todo list` app.
+
+## Creating todo list app state
+The app state is an array of objects, with each object representing one `todo`, which is initialized to an empty array. Notice how we use the `useState` hook to help us with this.
+
+## Creating new todos
+We use the `handleTodoCreate` method, which takes one parameter, a `todo object`. We do not operate on the app state; instead we create a new app state, create a new todo item, add it to the new app state, and then reset the app state with the new app state.
+
+## Update an existing todo
+We use the `handleTodoUpdate` method, which takes one parameter the todo item `id`. Again, we create a working app state, operate on it, and then use it to set a new app state.
+
+## Remove an existing todo
+We use the `handleTodoRemove` method, which takes one parameter the todo item `id`. Again, we create a working app state, operate on it, and then use it to set a new app state.
+
+## Completing an existing todo
+We use the `handleTodoComplete` method, which takes one parameter the todo item `id`. Again, we create a working app state, operate on it, and then use it to set a new app state.
+
+## Ensuring the todo item has a title
+We use the `handleTodoBlur` method and add/remove CSS classes to provide a visual notification to the user;
+
+## Returning all components
+Our todo list app is almost finished. Now, we now need to take all the components you’ve built so far, and imported in component, and return them. Make sure to provide all components with necessary props. After that, we can use the render() method and render the TodoListApp in the DOM.

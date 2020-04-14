@@ -58,3 +58,12 @@ Import the `TodoItemInterface` interface from `interfaces.ts` and to use it to t
 # Step 3 - Todo list component
 It takes handler methods for the `TodoItem`, and array of todo objects through props. The component itself contains one `div` wrapper element:
 - Inside this div will be a list, one ul element with a map() to iterate over the array of todo objects, and create one `li` element with one `TodoItem` component for each todo object, passing the individually `Todo` components to the `TodoItem` component, along with handler methods.
+
+# Step 4 - Todo form component
+We use useState and useRef React hooks:
+- `useRef` - Captures a reference to the `input` element; used to reset the `input` element value after the enter key is pressed;
+- `useState` - Captures the `input` element value when the user navigates outside the `input` element;
+
+The input element has two handler methods
+- onChange - Handles the event of navigating outside the `input` element; we want to preserve is value;
+- onKeyPress - Handles a `keypress` event, looking for the `enter` key so that we can create a new element;

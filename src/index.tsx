@@ -3,8 +3,9 @@ import * as React from 'react'
 import { render } from 'react-dom'
 
 // Import components
-import TodoForm from './components/todo-form'
-import TodoList from './components/todo-list'
+import TodoForm from './components/todo-form';
+import TodoList from './components/todo-list';
+import VisibilityFilters from './components/visibility-filters';
 
 // Import interfaces
 import { TodoInterface } from './interfaces'
@@ -15,9 +16,12 @@ import './styles/styles.css'
 // TodoListApp component
 const TodoListApp = () => {
   const [todos, setTodos] = React.useState<TodoInterface[]>([])
+  // const [todosFiltered, setTodosFiltered] = React.useState<TodoInterface[]>([])
+  const [visibilityFilter, setVisibilityFilter] = React.useState<string>('all')
 
   // Creating new todo item
   function handleTodoCreate(todo: TodoInterface) {
+    console.log('TodoApp.handleTodoCreate.todo = ' + JSON.stringify(todo));
     // Prepare new todos state
     const newTodosState: TodoInterface[] = [...todos]
 
@@ -26,7 +30,9 @@ const TodoListApp = () => {
 
     // Update todos state
     setTodos(newTodosState)
-  }
+    // handleVisibilityFilter(visibilityFilter);
+    // updateTodosState(newTodosState, visibilityFilter);
+}
 
   // Update existing todo item
   function handleTodoUpdate(event: React.ChangeEvent<HTMLInputElement>, id: string) {
@@ -38,6 +44,7 @@ const TodoListApp = () => {
 
     // Update todos state
     setTodos(newTodosState)
+    // updateTodosState(newTodosState, visibilityFilter);
   }
 
   // Remove existing todo item
@@ -47,6 +54,7 @@ const TodoListApp = () => {
 
     // Update todos state
     setTodos(newTodosState)
+    // updateTodosState(newTodosState, visibilityFilter);
   }
 
   // Check existing todo item as completed
@@ -59,7 +67,17 @@ const TodoListApp = () => {
 
     // Update todos state
     setTodos(newTodosState)
+    // updateTodosState(newTodosState, visibilityFilter);
   }
+
+  // function updateTodosState(ntdState: TodoInterface[], vFilter: string) {
+  //   console.log('TodoApp.updateTodosState.ntdstate = ' + JSON.stringify(ntdState));
+  //   console.log('TodoApp.updateTodosState.vFilter = ' + vFilter);
+  //   console.log('TodoApp.updateTodosState.todos (before update) = ' + JSON.stringify(todos));
+  //   setTodos(ntdState);
+  //   console.log('TodoApp.updateTodosState.todos (after update) = ' + JSON.stringify(todos));
+  //   handleVisibilityFilter(vFilter);
+  // }
 
   // Check if todo item has title
   function handleTodoBlur(event: React.ChangeEvent<HTMLInputElement>) {
@@ -68,6 +86,30 @@ const TodoListApp = () => {
     } else {
       event.target.classList.remove('todo-input-error')
     }
+  }
+
+  function  handleVisibilityFilter (filter: string) {
+    console.log('TodoApp.handleVisibilityFilter.Filter = ' + filter);
+    setVisibilityFilter(filter);
+    // let newTodosFiltered: TodoInterface[];
+    // console.log('TodoApp.handleVisibilityFilter.todos = ' + JSON.stringify(todos));
+    // switch (filter) {
+    //     case 'all':
+    //         newTodosFiltered = [...todos];
+    //         break;
+    //     case 'open':
+    //         newTodosFiltered = todos.filter((todo: TodoInterface) => todo.isCompleted === false);
+    //         break;
+    //     case 'done':
+    //         newTodosFiltered = todos.filter((todo: TodoInterface) => todo.isCompleted === true);
+    //         break;
+    //     default:
+    //         newTodosFiltered = [...todos];
+    //         break;
+    //   }
+    //   setTodosFiltered(newTodosFiltered);
+    //   console.log('TodoApp.handleVisibilityFilter.newTodosUIState = ' + JSON.stringify(newTodosFiltered));
+    //   console.log('TodoApp.handleVisibilityFilter.todosUI = ' + JSON.stringify(todosFiltered));
   }
 
   return (
@@ -80,11 +122,17 @@ const TodoListApp = () => {
 
       <TodoList
         todos={todos}
+        visibilityFilter={visibilityFilter}
         handleTodoUpdate={handleTodoUpdate}
         handleTodoRemove={handleTodoRemove}
         handleTodoComplete={handleTodoComplete}
         handleTodoBlur={handleTodoBlur}
       />
+
+      <VisibilityFilters
+        handleVisibilityFilter={handleVisibilityFilter}
+      />
+
     </div>
   )
 }

@@ -13,11 +13,12 @@ export interface TodoFormInterface {
 
 // Todo list interface
 export interface TodoListInterface {
+  todos: TodoInterface[];
+  visibilityFilter: string;
   handleTodoUpdate: (event: React.ChangeEvent<HTMLInputElement>, id: string) => void;
   handleTodoRemove: (id: string) => void;
   handleTodoComplete: (id: string) => void;
   handleTodoBlur: (event: React.ChangeEvent<HTMLInputElement>) => void;
-  todos: TodoInterface[]
 }
 
 // Todo item interface
@@ -27,4 +28,9 @@ export interface TodoItemInterface {
   handleTodoComplete: (id: string) => void;
   handleTodoBlur: (event: React.ChangeEvent<HTMLInputElement>) => void;
   todo: TodoInterface;
+}
+
+// Visibility Filter interface
+export interface VisibilityFiltersInterface {
+    handleVisibilityFilter: (filter: string) => void;
 }

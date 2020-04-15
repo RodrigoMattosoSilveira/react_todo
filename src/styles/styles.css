@@ -31,6 +31,8 @@ body {
 
 .todo-header {
     color: rgba(175, 47, 47, 0.15);
+    text-align: center;
+    font-size: 400%;
 }
 /* Todo list app styles  */
 .todo-list-app {
@@ -135,4 +137,20 @@ body {
 
 .item-remove:hover {
   color: #111;
+}
+
+
+/** visibility filters **/
+.filter {
+  padding: 0.3rem 0;
+  margin: 0 0.3rem;
+  cursor: pointer;
+}
+.filter--active {
+  border-bottom: 1px solid black;
+}
+.show-todo-item {
+}
+.hide-todo-item {
+    display:none;
 }

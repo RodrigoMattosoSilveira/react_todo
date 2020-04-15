@@ -30,7 +30,7 @@ const TodoForm = (props: TodoFormInterface) => {
       props.handleTodoCreate(newTodo)
       // Reset the input field
       if (inputRef && inputRef.current) {
-        inputRef.current.value = ''
+        inputRef.current.value = '';
       }
     }
   }

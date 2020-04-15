@@ -100,3 +100,14 @@ We use the `handleTodoBlur` method and add/remove CSS classes to provide a visua
 Our todo list app is almost finished. Now, we now need to take all the components you’ve built so far, and imported in component, and return them. Make sure to provide all components with necessary props. After that, we can use the render() method and render the TodoListApp in the DOM.
 # styles
 Just add a little markup
+# The render
+# Next Steps
+## Add a header
+A simple header at the top
+## Add filters
+The solution has the following elements:
+- A VisibilityFilter Component, below the todo list, showing 3 options: all (default), open, done;
+- A state property, `visibilityFilter`, implemented as a `React hook`, in `index.tsx` and used to capture the current `visibilityFilter`;
+- A refactored `TodoListInterface` to pass the `visibilityFilter` prop to the `TodoList` Component;
+- A function, `computeVisible`, in the `TodoList` component to compute a class name to (show / hide) a todo item based on its  state (open / done) and the visibility criteria;
+- Two CSS classes, `show-todo-item` and `hide-todo-item`, added to `styles.css`, to show/hide todo list items, based on their state (open / done) and the visibility criteria;

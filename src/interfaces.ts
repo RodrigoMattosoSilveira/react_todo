@@ -32,5 +32,6 @@ export interface TodoItemInterface {
 
 // Visibility Filter interface
 export interface VisibilityFiltersInterface {
+    visibilityFilter: string;
     handleVisibilityFilter: (filter: string) => void;
 }

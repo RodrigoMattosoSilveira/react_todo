@@ -1,3 +1,6 @@
+# GitHub Pages
+You can see it running in [GitHub pages](https://rodrigomattososilveira.github.io/react_todo/)
+
 # Application structure
 When we are done, it will be:
 

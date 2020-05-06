@@ -1,3 +1,7 @@
+# GitHub Pages
+You can see it running in [GitHub pages](https://rodrigomattososilveira.github.io/react_todo/)
+
+# Introduction
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

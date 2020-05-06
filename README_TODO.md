@@ -1,3 +1,13 @@
+# GitHub Pages
+## To publish it
+Run the following command:
+````bash
+rodrigomattososilveira@Rodrigos-MBP-2[~/projects/react_todo]
+$ yarn deploy
+````
+## To view it
+Navigate to: [GitHub pages](https://rodrigomattososilveira.github.io/react_todo/)
+
 # Application structure
 When we are done, it will be:
 

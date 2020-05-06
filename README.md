@@ -1,3 +1,14 @@
+# GitHub Pages
+## To publish it
+Run the following command:
+````bash
+rodrigomattososilveira@Rodrigos-MBP-2[~/projects/react_todo]
+$ yarn deploy
+````
+## To view it
+Navigate to: [GitHub pages](https://rodrigomattososilveira.github.io/react_todo/)
+
+# Introduction
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

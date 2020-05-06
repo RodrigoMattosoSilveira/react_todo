@@ -146,7 +146,7 @@ body {
   margin: 0 0.3rem;
   cursor: pointer;
 }
-.filter--active {
+.filter-active {
   border-bottom: 1px solid black;
 }
 .show-todo-item {

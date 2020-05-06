@@ -130,6 +130,7 @@ const TodoListApp = () => {
       />
 
       <VisibilityFilters
+        visibilityFilter={visibilityFilter}
         handleVisibilityFilter={handleVisibilityFilter}
       />
 

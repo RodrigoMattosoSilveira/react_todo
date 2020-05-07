@@ -9,10 +9,10 @@ import { TodoListInterface } from './../interfaces'
 
 function computeVisible (visibilityFilter: string, isCompleted: boolean ): string {
     let className = 'show-todo-item';
-    if (visibilityFilter === 'open' && isCompleted || visibilityFilter === 'done' && !isCompleted) {
-        className = 'hide-todo-item';
-    }
-    return className;
+	if ((visibilityFilter === 'open' && isCompleted) ||
+		(visibilityFilter === 'done' && !isCompleted)) {
+		className = 'hide-todo-item';
+	}    return className;
 }
 
 // TodoList component

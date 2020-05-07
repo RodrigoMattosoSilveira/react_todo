@@ -5,8 +5,11 @@ Run the following command:
 rodrigomattososilveira@Rodrigos-MBP-2[~/projects/react_todo]
 $ yarn deploy
 ````
-## To view it
-Navigate to: [GitHub pages](https://rodrigomattososilveira.github.io/react_todo/)
+## To view it in GitHub Pages
+Navigate to: [React Todo Exercise](https://rodrigomattososilveira.github.io/react_todo/)
+
+## Build status
+![](https://github.com/rodrigomattososilveira/react_todo/workflows/React%20Todo%20Exercise/badge.svg)
 
 # Introduction
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

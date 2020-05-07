@@ -1,7 +1,7 @@
 name: React Todo Exercise
 on:
   push:
-    branches: [ issue-2-badge ]
+    branches: [ issue-none ]
   pull_request:
     branches: [ master ]
 
